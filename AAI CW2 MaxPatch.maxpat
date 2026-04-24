@@ -10,17 +10,148 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 134.0, 85.0, 1452.0, 905.0 ],
+		"rect" : [ 263.0, 85.0, 1452.0, 905.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-130",
+					"lastchannelcount" : 1,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 840.794170200824738, 925.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "mc.live.gain~",
+							"parameter_mmax" : 6.0,
+							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 3,
+							"parameter_shortname" : "mc.live.gain~",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "mc.live.gain~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-129",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1552.0, 999.0, 29.5, 22.0 ],
+					"text" : "1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-127",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1344.0, 992.0, 97.0, 22.0 ],
+					"text" : "open ueueu.wav"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-94",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "bang" ],
+					"patching_rect" : [ 1344.0, 1032.756121635437012, 47.0, 22.0 ],
+					"text" : "sfplay~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"basictuning" : 440,
+					"data" : 					{
+						"clips" : [ 							{
+								"absolutepath" : "C:/Users/SLINDE300/Documents/GitHub/AAI-CW2-MaxPatch/chess.wav",
+								"filename" : "chess.wav",
+								"filekind" : "audiofile",
+								"id" : "u508000411",
+								"selection" : [ 0.0, 1.0 ],
+								"loop" : 1,
+								"content_state" : 								{
+									"loop" : 1
+								}
+
+							}
+ ]
+					}
+,
+					"followglobaltempo" : 0,
+					"formantcorrection" : 0,
+					"id" : "obj-93",
+					"maxclass" : "playlist~",
+					"mode" : "basic",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"originallength" : [ 0.0, "ticks" ],
+					"originaltempo" : 120.0,
+					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 352.0, 968.0, 150.0, 30.0 ],
+					"pitchcorrection" : 0,
+					"quality" : "basic",
+					"saved_attribute_attributes" : 					{
+						"candicane2" : 						{
+							"expression" : ""
+						}
+,
+						"candicane3" : 						{
+							"expression" : ""
+						}
+,
+						"candicane4" : 						{
+							"expression" : ""
+						}
+,
+						"candicane5" : 						{
+							"expression" : ""
+						}
+,
+						"candicane6" : 						{
+							"expression" : ""
+						}
+,
+						"candicane7" : 						{
+							"expression" : ""
+						}
+,
+						"candicane8" : 						{
+							"expression" : ""
+						}
+
+					}
+,
+					"timestretch" : [ 0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1340.366176724433899, 935.0, 67.0, 22.0 ],
-					"text" : "delay 2000"
+					"patching_rect" : [ 1340.366176724433899, 921.0, 67.0, 22.0 ],
+					"text" : "delay 1500"
 				}
 
 			}
@@ -32,7 +163,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1344.0, 979.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1340.366176724433899, 959.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -941,6 +1072,22 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-127", 0 ],
+					"order" : 1,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-129", 0 ],
+					"order" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-122", 0 ],
 					"midpoints" : [ 1380.633617877960205, 741.11137365642935, 1564.386883750557899, 741.11137365642935, 1564.386883750557899, 682.289439309155568, 1681.796397805213928, 682.289439309155568 ],
 					"source" : [ "obj-100", 0 ]
@@ -1139,6 +1286,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-94", 0 ],
+					"source" : [ "obj-127", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-94", 0 ],
+					"source" : [ "obj-129", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-117", 0 ],
 					"order" : 0,
 					"source" : [ "obj-13", 0 ]
@@ -1151,6 +1312,24 @@
 					"midpoints" : [ 1117.5, 522.5, 1349.866176724433899, 522.5 ],
 					"order" : 1,
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"midpoints" : [ 850.294170200824738, 1071.0, 983.750756531953812, 1071.0, 983.750756531953812, 999.756121635437012, 1117.207342863082886, 999.756121635437012 ],
+					"order" : 0,
+					"source" : [ "obj-130", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 850.294170200824738, 1071.0, 970.750756531953812, 1071.0, 970.750756531953812, 999.756121635437012, 1091.207342863082886, 999.756121635437012 ],
+					"order" : 1,
+					"source" : [ "obj-130", 0 ]
 				}
 
 			}
@@ -1426,6 +1605,40 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-130", 0 ],
+					"midpoints" : [ 394.25, 1008.0, 622.272085100412369, 1008.0, 622.272085100412369, 915.0, 850.294170200824738, 915.0 ],
+					"source" : [ "obj-93", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-130", 0 ],
+					"midpoints" : [ 361.5, 1008.0, 605.897085100412369, 1008.0, 605.897085100412369, 915.0, 850.294170200824738, 915.0 ],
+					"source" : [ "obj-93", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"midpoints" : [ 1353.5, 1064.756121635437012, 1235.353671431541443, 1064.756121635437012, 1235.353671431541443, 999.756121635437012, 1117.207342863082886, 999.756121635437012 ],
+					"order" : 0,
+					"source" : [ "obj-94", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 1353.5, 1064.756121635437012, 1222.353671431541443, 1064.756121635437012, 1222.353671431541443, 999.756121635437012, 1091.207342863082886, 999.756121635437012 ],
+					"order" : 1,
+					"source" : [ "obj-94", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-104", 0 ],
 					"midpoints" : [ 1200.540602564811707, 577.540648216963746, 1360.866176724433899, 577.540648216963746 ],
 					"source" : [ "obj-97", 1 ]
@@ -1450,6 +1663,7 @@
  ],
 		"parameters" : 		{
 			"obj-119" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-130" : [ "mc.live.gain~", "mc.live.gain~", 0 ],
 			"obj-24" : [ "live.gain~", "live.gain~", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
@@ -1463,7 +1677,14 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "chess.wav",
+				"bootpath" : "~/Documents/GitHub/AAI-CW2-MaxPatch",
+				"patcherrelativepath" : ".",
+				"type" : "WAVE",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 
